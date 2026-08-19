@@ -102,12 +102,15 @@ a.duolingo-card:focus-visible {
   white-space: nowrap;
 }
 
-.duolingo-owl {
+/* Logotipo por extenso (283x66 no viewBox), nao um icone quadrado: a altura
+   sai da largura, e a cor vem do accent para acompanhar o resto do card. */
+.duolingo-wordmark {
   flex: 0 0 auto;
   align-self: flex-start;
-  font-size: 1.35rem;
-  line-height: 1;
-  opacity: .85;
+  width: 4.75rem;
+  height: auto;
+  margin-top: .15rem;
+  fill: var(--duolingo-accent);
 }
 
 /* ---------- estatisticas ---------- */
@@ -230,7 +233,7 @@ a.duolingo-card:focus-visible {
 }
 
 .duolingo-compact .duolingo-avatar { width: 2.5rem; height: 2.5rem; }
-.duolingo-compact .duolingo-owl { display: none; }
+.duolingo-compact .duolingo-wordmark { width: 3.5rem; }
 .duolingo-compact .duolingo-stats { gap: 1.1rem; margin-top: .75rem; }
 .duolingo-compact .duolingo-stat-value { font-size: 1.15rem; }
 .duolingo-compact .duolingo-stat-note { display: none; }
