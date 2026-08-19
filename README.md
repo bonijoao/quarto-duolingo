@@ -40,6 +40,16 @@ Any option can also be given inline, which overrides the YAML:
 {{< duolingo lang="pt" theme="dark" layout="compact" >}}
 ```
 
+If you really only study one language, this is probably the shape you want —
+the streak and the XP, and just that course:
+
+```yaml
+duolingo:
+  user: joohbonny
+  courses: 1
+  bars: false
+```
+
 ## Options
 
 | Option | Default | What it does |
@@ -51,7 +61,8 @@ Any option can also be given inline, which overrides the YAML:
 | `layout` | `card` | `card` is the full widget; `compact` is a slim one-liner for sidebars and footers. |
 | `avatar` | `true` | Show your Duolingo avatar (embedded in the page, not hotlinked). |
 | `stats` | `[streak, xp, since]` | Which tiles to show, in order. |
-| `courses` | `4` | How many courses to list. `0` hides the list. |
+| `courses` | `4` | How many courses to list, biggest first. `0` hides the list. |
+| `bars` | `true` | Draw each course's XP as a bar relative to your biggest one. Worth turning off when you only list one course — the bar would always be full. |
 | `link` | `true` | Make the card link to your Duolingo profile. |
 | `on-error` | `warn` | `warn` logs a warning and omits the card; `fail` aborts the render. |
 

@@ -23,7 +23,7 @@ local avatar_cache = {}
 -- `user` (sem default) jamais apareceria em pairs(DEFAULTS).
 local OPTION_KEYS = {
   "user", "lang", "theme", "accent", "layout",
-  "avatar", "stats", "courses", "link", "on-error",
+  "avatar", "stats", "courses", "bars", "link", "on-error",
 }
 
 local DEFAULTS = {
@@ -34,6 +34,7 @@ local DEFAULTS = {
   avatar = true,
   stats = { "streak", "xp", "since" },
   courses = 4,
+  bars = true,
   link = true,
   ["on-error"] = "warn",
 }
@@ -187,6 +188,7 @@ local function read_options(kwargs, meta)
 
   if type(opts.user) == "table" then opts.user = opts.user[1] end
   opts.avatar = truthy(opts.avatar, true)
+  opts.bars = truthy(opts.bars, true)
   opts.link = truthy(opts.link, true)
   opts.courses = math.floor(tonumber(opts.courses) or 0)
   if type(opts.stats) == "string" then
@@ -335,21 +337,31 @@ local function courses_html(profile, opts, tr)
   local rows = {}
   for i, c in ipairs(profile.courses) do
     if i > opts.courses then break end
-    -- Barra proporcional ao curso lider: da para ler o peso de cada idioma
-    -- de relance, sem precisar comparar numeros.
-    local pct = math.max(2, math.floor((c.xp / top) * 100 + 0.5))
+
+    local bar = ""
+    if opts.bars then
+      -- Barra proporcional ao curso lider: da para ler o peso de cada idioma
+      -- de relance, sem precisar comparar numeros. Com um curso so ela nao
+      -- diz nada (seria sempre 100%), por isso da para desligar.
+      local pct = math.max(2, math.floor((c.xp / top) * 100 + 0.5))
+      bar = '<span class="duolingo-course-track"><span class="duolingo-course-bar"'
+        .. ' style="width:' .. pct .. '%"></span></span>'
+    end
+
     rows[#rows + 1] = table.concat({
       '<div class="duolingo-course">',
       '<span class="duolingo-course-flag">', c.flag, '</span>',
       '<span class="duolingo-course-name">', esc(c.label), '</span>',
-      '<span class="duolingo-course-track"><span class="duolingo-course-bar" style="width:',
-      pct, '%"></span></span>',
+      bar,
       '<span class="duolingo-course-xp">', esc(group(c.xp, tr.sep)), ' XP</span>',
       '</div>',
     })
   end
 
-  return '<div class="duolingo-courses"><div class="duolingo-section-label">'
+  local cls = "duolingo-courses"
+  if not opts.bars then cls = cls .. " duolingo-no-bars" end
+
+  return '<div class="' .. cls .. '"><div class="duolingo-section-label">'
     .. esc(tr.learning) .. '</div>' .. table.concat(rows) .. '</div>'
 end
 

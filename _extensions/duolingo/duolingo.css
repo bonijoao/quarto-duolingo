@@ -207,6 +207,12 @@ a.duolingo-card:focus-visible {
   background: var(--duolingo-accent);
 }
 
+/* Com `bars: false` a trilha some, e era ela que empurrava o XP para a
+   direita: o nome assume esse papel. */
+.duolingo-no-bars .duolingo-course-name {
+  flex: 1 1 auto;
+}
+
 .duolingo-course-xp {
   flex: 0 0 auto;
   min-width: 4.5rem;

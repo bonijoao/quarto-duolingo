@@ -68,6 +68,18 @@ Fits a sidebar or a footer:
 
 {{< duolingo stats="streak,xp" courses="0" avatar="false" >}}
 
+## Just the main course, no bars
+
+The bars compare each course against your biggest one, so they earn their keep
+only when you study several languages. With one course — or with a course that
+dwarfs the rest — turn them off:
+
+```
+{{< duolingo courses="1" bars="false" >}}
+```
+
+{{< duolingo courses="1" bars="false" lang="pt" >}}
+
 ## Another user
 
 Any public profile works:
