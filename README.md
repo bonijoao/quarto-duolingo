@@ -1,7 +1,6 @@
 # quarto-duolingo
 
-**Put your Duolingo streak on your Quarto site — with one line, no JavaScript,
-and no API keys.**
+**Put your Duolingo streak on your Quarto site**
 
 ```
 {{< duolingo >}}
@@ -10,29 +9,11 @@ and no API keys.**
 <!-- Substitua pela captura do card assim que a demo estiver no ar:
      ![](docs/card.png) -->
 
-If you build your portfolio, CV or personal site with Quarto, this drops a card
-with your streak, your XP and the languages you are learning right into the
-page — next to your R packages, your publications and your GitHub link, where a
-"Languages: English — intermediate" bullet used to sit doing nothing.
-
-## Why you might want this
-
-A CV line that says *"English: intermediate"* is a claim. A card that says
-**1,213 days without missing a lesson** is evidence — and it is the kind of
-evidence that says something about you that a certificate cannot: that you show
-up every single day. If you already keep a `pacotes.qmd` and a `cv.qmd`, this is
-one more line of YAML.
-
-It was built for the crowd that lives in Quarto: data scientists, statisticians
-and researchers who write their site the same way they write their analyses.
+If you build your portfolio, CV or personal site with Quarto, this drops a card with your streak, your XP and the languages you are learning right into the page.
 
 ## How it works
 
-This is the part worth understanding, because it explains why the setup is so
-short.
-
-Duolingo has a public profile endpoint. The obvious approach — fetch it from the
-visitor's browser — **does not work**: the response carries no
+Duolingo has a public profile endpoint. The obvious approach — fetch it from the visitor's browser — **does not work**: the response carries no
 `Access-Control-Allow-Origin` header, so the browser blocks it. Every
 JavaScript-based attempt at this ends up needing a CORS proxy, or a scheduled
 job that stores the data in a JSON file next to your site.
