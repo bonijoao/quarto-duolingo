@@ -1,0 +1,296 @@
+/* quarto-duolingo
+   Tudo tem prefixo .duolingo- e mora dentro de .duolingo-card: uma extensao
+   de terceiro nao pode vazar estilo para o site de quem a instala. */
+
+.duolingo-card {
+  --duolingo-accent: #58cc02;
+  --duolingo-bg: #ffffff;
+  --duolingo-border: #e3e7ec;
+  --duolingo-fg: #14202e;
+  --duolingo-muted: #6b7787;
+  --duolingo-track: #eef1f5;
+  --duolingo-shadow: 0 1px 2px rgba(16, 24, 40, .05), 0 8px 24px rgba(16, 24, 40, .06);
+  --duolingo-shadow-hover: 0 2px 4px rgba(16, 24, 40, .06), 0 16px 40px rgba(16, 24, 40, .12);
+
+  display: block;
+  box-sizing: border-box;
+  max-width: 30rem;
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  background: var(--duolingo-bg);
+  border: 1px solid var(--duolingo-border);
+  border-radius: 1rem;
+  box-shadow: var(--duolingo-shadow);
+  color: var(--duolingo-fg);
+  font-size: 1rem;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
+}
+
+.duolingo-card *,
+.duolingo-card *::before,
+.duolingo-card *::after { box-sizing: border-box; }
+
+a.duolingo-card:hover,
+a.duolingo-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--duolingo-accent);
+  box-shadow: var(--duolingo-shadow-hover);
+  text-decoration: none;
+  color: var(--duolingo-fg);
+}
+
+a.duolingo-card:focus-visible {
+  outline: 2px solid var(--duolingo-accent);
+  outline-offset: 3px;
+}
+
+/* ---------- cabecalho ---------- */
+
+.duolingo-head {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+.duolingo-avatar {
+  flex: 0 0 auto;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--duolingo-track);
+  box-shadow: 0 0 0 2px var(--duolingo-bg), 0 0 0 4px var(--duolingo-accent);
+}
+
+.duolingo-identity {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.duolingo-name {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -.01em;
+  /* nomes longos nao podem empurrar a coruja para fora do card */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.duolingo-super {
+  flex: 0 0 auto;
+  padding: .05rem .4rem;
+  border-radius: 1rem;
+  background: var(--duolingo-accent);
+  color: #fff;
+  font-size: .6rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.duolingo-handle {
+  color: var(--duolingo-muted);
+  font-size: .8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Logotipo por extenso (283x66 no viewBox), nao um icone quadrado: a altura
+   sai da largura, e a cor vem do accent para acompanhar o resto do card. */
+.duolingo-wordmark {
+  flex: 0 0 auto;
+  align-self: flex-start;
+  width: 4.75rem;
+  height: auto;
+  margin-top: .15rem;
+  fill: var(--duolingo-accent);
+}
+
+/* ---------- estatisticas ---------- */
+
+.duolingo-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.1rem;
+}
+
+.duolingo-stat { min-width: 4.5rem; }
+
+.duolingo-stat-value {
+  display: flex;
+  align-items: baseline;
+  gap: .3rem;
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.duolingo-stat-icon {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.duolingo-stat-label {
+  margin-top: .15rem;
+  color: var(--duolingo-muted);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.duolingo-stat-note {
+  margin-top: .1rem;
+  color: var(--duolingo-muted);
+  font-size: .68rem;
+  opacity: .85;
+}
+
+/* ---------- cursos ---------- */
+
+.duolingo-courses {
+  margin-top: 1.1rem;
+  padding-top: .9rem;
+  border-top: 1px solid var(--duolingo-border);
+}
+
+.duolingo-section-label {
+  margin-bottom: .6rem;
+  color: var(--duolingo-muted);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.duolingo-course {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .18rem 0;
+  font-size: .82rem;
+}
+
+.duolingo-course-flag { flex: 0 0 auto; }
+
+.duolingo-course-name {
+  flex: 0 0 5.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* A barra é o que faz a lista de cursos ser lida de relance:
+   largura proporcional ao curso com mais XP. */
+.duolingo-course-track {
+  flex: 1 1 auto;
+  height: .4rem;
+  border-radius: 1rem;
+  background: var(--duolingo-track);
+  overflow: hidden;
+}
+
+.duolingo-course-bar {
+  display: block;
+  height: 100%;
+  border-radius: 1rem;
+  background: var(--duolingo-accent);
+}
+
+/* Com `bars: false` a trilha some, e era ela que empurrava o XP para a
+   direita: o nome assume esse papel. */
+.duolingo-no-bars .duolingo-course-name {
+  flex: 1 1 auto;
+}
+
+.duolingo-course-xp {
+  flex: 0 0 auto;
+  min-width: 4.5rem;
+  color: var(--duolingo-muted);
+  font-size: .72rem;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+/* ---------- rodape ---------- */
+
+.duolingo-foot {
+  margin-top: .9rem;
+  color: var(--duolingo-muted);
+  font-size: .65rem;
+  opacity: .8;
+}
+
+/* ---------- layout compacto ---------- */
+
+.duolingo-compact {
+  max-width: 22rem;
+  padding: .85rem 1rem;
+}
+
+.duolingo-compact .duolingo-avatar { width: 2.5rem; height: 2.5rem; }
+.duolingo-compact .duolingo-wordmark { width: 3.5rem; }
+.duolingo-compact .duolingo-stats { gap: 1.1rem; margin-top: .75rem; }
+.duolingo-compact .duolingo-stat-value { font-size: 1.15rem; }
+.duolingo-compact .duolingo-stat-note { display: none; }
+.duolingo-compact .duolingo-foot { display: none; }
+
+/* ---------- telas estreitas ---------- */
+
+@media (max-width: 26rem) {
+  .duolingo-stats { gap: 1rem; }
+  .duolingo-stat-value { font-size: 1.35rem; }
+  .duolingo-course-name { flex-basis: 4rem; }
+}
+
+/* ---------- tema escuro ----------
+   Tres gatilhos: preferencia do sistema (theme: auto), o toggle do
+   Bootstrap/Quarto — que nao mexe em prefers-color-scheme —, e a classe
+   fixa emitida por theme: dark. */
+
+@media (prefers-color-scheme: dark) {
+  .duolingo-card:not(.duolingo-theme-light) {
+    --duolingo-bg: #131a24;
+    --duolingo-border: #2a3441;
+    --duolingo-fg: #f2f5f8;
+    --duolingo-muted: #97a3b4;
+    --duolingo-track: #232e3b;
+    --duolingo-shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .35);
+    --duolingo-shadow-hover: 0 2px 4px rgba(0, 0, 0, .35), 0 16px 40px rgba(0, 0, 0, .5);
+  }
+}
+
+[data-bs-theme="dark"] .duolingo-card:not(.duolingo-theme-light),
+.quarto-dark .duolingo-card:not(.duolingo-theme-light),
+.duolingo-card.duolingo-theme-dark {
+  --duolingo-bg: #131a24;
+  --duolingo-border: #2a3441;
+  --duolingo-fg: #f2f5f8;
+  --duolingo-muted: #97a3b4;
+  --duolingo-track: #232e3b;
+  --duolingo-shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .35);
+  --duolingo-shadow-hover: 0 2px 4px rgba(0, 0, 0, .35), 0 16px 40px rgba(0, 0, 0, .5);
+}
+
+/* theme: light explicito vence o modo escuro do sistema */
+.duolingo-card.duolingo-theme-light {
+  --duolingo-bg: #ffffff;
+  --duolingo-border: #e3e7ec;
+  --duolingo-fg: #14202e;
+  --duolingo-muted: #6b7787;
+  --duolingo-track: #eef1f5;
+}
+
+@media print {
+  .duolingo-card { box-shadow: none; }
+}
