@@ -193,9 +193,9 @@ unavailable, you get a warning in the log and the page renders without the card.
 
 Flag emoji show up as two letter codes on Windows, which ships no flag glyphs.
 
+The `user` option accepts any public username. Point it at accounts you have
+reason to publish, since the card reproduces a person's name, avatar and daily
+activity on your site.
+
 Not affiliated with or endorsed by Duolingo, Inc. The Duolingo name and
 logotype belong to them.
-
-## License
-
-MIT, see [LICENSE](LICENSE).

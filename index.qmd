@@ -71,17 +71,24 @@ Fits a sidebar or a footer:
 ## Just the main course, no bars
 
 The bars compare each course against your biggest one, so they earn their keep
-only when you study several languages. With one course — or with a course that
-dwarfs the rest — turn them off:
+when you study several languages. With a single course, or with one course that
+dwarfs the rest, turn them off:
 
-```
-{{< duolingo courses="1" bars="false" >}}
-```
+````
+{{{< duolingo courses="1" bars="false" >}}}
+````
 
 {{< duolingo courses="1" bars="false" lang="pt" >}}
 
-## Another user
+## Overriding the username
 
-Any public profile works:
+The `user` option works inline too, so a page can point at a different account
+than the one set in the YAML:
 
-{{< duolingo user="Luis" lang="en" >}}
+````
+{{{< duolingo user="another-username" >}}}
+````
+
+Every card on this page reads a single profile: the author's own. Point the
+extension at accounts you have reason to publish, since the card reproduces a
+person's name, avatar and activity on your site.
