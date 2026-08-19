@@ -181,7 +181,21 @@ a.duolingo-card:focus-visible {
   font-size: .82rem;
 }
 
-.duolingo-course-flag { flex: 0 0 auto; }
+/* Codigo do idioma no lugar de bandeira: renderiza igual em qualquer sistema.
+   Largura fixa para os codigos de 2 e 3 letras alinharem na coluna. */
+.duolingo-course-code {
+  flex: 0 0 auto;
+  min-width: 1.9rem;
+  padding: .1rem .3rem;
+  border-radius: .3rem;
+  background: var(--duolingo-track);
+  color: var(--duolingo-muted);
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-align: center;
+  text-transform: uppercase;
+}
 
 .duolingo-course-name {
   flex: 0 0 5.5rem;
