@@ -88,14 +88,11 @@ local COURSE_NAMES = {
          ru = "Russisch", pt = "Portugiesisch", nl = "Niederländisch", sv = "Schwedisch" },
 }
 
-local FLAGS = {
-  en = "🇺🇸", es = "🇪🇸", fr = "🇫🇷", de = "🇩🇪", it = "🇮🇹", pt = "🇧🇷",
-  ja = "🇯🇵", ko = "🇰🇷", zh = "🇨🇳", ru = "🇷🇺", nl = "🇳🇱", sv = "🇸🇪",
-  ar = "🇸🇦", hi = "🇮🇳", tr = "🇹🇷", pl = "🇵🇱", el = "🇬🇷", he = "🇮🇱",
-  ga = "🇮🇪", cy = "🏴󠁧󠁢󠁷󠁬󠁳󠁿", da = "🇩🇰", nb = "🇳🇴", fi = "🇫🇮", cs = "🇨🇿",
-  uk = "🇺🇦", hu = "🇭🇺", ro = "🇷🇴", vi = "🇻🇳", id = "🇮🇩", eo = "🟩",
-  la = "🏛️", hw = "🏝️", nv = "🪶", gd = "🏴󠁧󠁢󠁳󠁣󠁴󠁿", yi = "✡️", hv = "🐉", tlh = "🖖",
-}
+-- Antes daqui havia um mapa de bandeiras em emoji. Duas razoes para trocar
+-- pelo codigo do idioma: o Windows nao tem glifos de bandeira e renderiza o
+-- par de letras do codigo regional, entao o card mudava de cara conforme o
+-- sistema; e bandeira nao representa idioma, o que fica evidente nos cursos
+-- de Esperanto, Latim, Klingon e Alto Valiriano.
 
 -- Logotipo do Duolingo, embutido para a extensao nao depender de arquivo
 -- externo. O SVG original traz <style>.st0{fill:#58CC02}</style> e um id:
@@ -281,7 +278,7 @@ local function normalize(raw, opts)
   local names = COURSE_NAMES[opts.lang] or {}
   for _, c in ipairs(courses) do
     c.label = names[c.code] or c.title or c.code
-    c.flag = FLAGS[c.code] or "🏳️"
+    c.badge = c.code and c.code:upper() or "?"
   end
 
   return {
@@ -350,7 +347,7 @@ local function courses_html(profile, opts, tr)
 
     rows[#rows + 1] = table.concat({
       '<div class="duolingo-course">',
-      '<span class="duolingo-course-flag">', c.flag, '</span>',
+      '<span class="duolingo-course-code">', esc(c.badge), '</span>',
       '<span class="duolingo-course-name">', esc(c.label), '</span>',
       bar,
       '<span class="duolingo-course-xp">', esc(group(c.xp, tr.sep)), ' XP</span>',
