@@ -1,4 +1,4 @@
-# Publica o example.qmd em gh-pages.
+# Publica o index.qmd em gh-pages.
 #
 # O cron nao esta aqui por enfeite: e a demonstracao do que o README manda
 # fazer. Sem ele, o card da demo congelaria no dia do ultimo push.

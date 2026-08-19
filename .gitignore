@@ -3,5 +3,3 @@ _site/
 *_files/
 .Rproj.user
 .DS_Store
-example.html
-example_files/

@@ -1,0 +1,10 @@
+# O repo precisa ser um projeto Quarto para o `quarto publish gh-pages`
+# funcionar — sem isso ele recusa com "is not a website ... project".
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "quarto-duolingo"
+  description: "Duolingo streak, XP and courses for Quarto sites"
+  repo-url: https://github.com/bonijoao/quarto-duolingo
