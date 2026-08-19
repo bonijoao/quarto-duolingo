@@ -1,0 +1,33 @@
+# Publica o example.qmd em gh-pages.
+#
+# O cron nao esta aqui por enfeite: e a demonstracao do que o README manda
+# fazer. Sem ele, o card da demo congelaria no dia do ultimo push.
+name: Publish example
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 9 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: quarto-dev/quarto-actions/setup@v2
+
+      - uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

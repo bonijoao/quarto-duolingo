@@ -1,0 +1,75 @@
+---
+title: "quarto-duolingo"
+subtitle: "A Duolingo widget for Quarto documents"
+format:
+  html:
+    theme: cosmo
+    toc: true
+duolingo:
+  user: joohbonny
+---
+
+## Default
+
+Set the username once in your YAML and drop the shortcode wherever you want it:
+
+```` markdown
+---
+duolingo:
+  user: joohbonny
+---
+
+{{{< duolingo >}}}
+````
+
+{{< duolingo >}}
+
+The data is fetched **while the document renders**, so the published page is
+plain HTML — no JavaScript, no API calls from the visitor's browser.
+
+## Languages
+
+`lang` controls both the labels and the number formatting.
+
+::: {layout-ncol=2}
+{{< duolingo lang="pt" >}}
+
+{{< duolingo lang="es" >}}
+
+{{< duolingo lang="fr" >}}
+
+{{< duolingo lang="de" >}}
+:::
+
+## Themes
+
+`auto` (the default) follows the reader's system setting and the Quarto dark
+toggle. `light` and `dark` pin it.
+
+::: {layout-ncol=2}
+{{< duolingo theme="light" >}}
+
+{{< duolingo theme="dark" >}}
+:::
+
+## Accent colour
+
+{{< duolingo accent="#ff4b4b" >}}
+
+{{< duolingo accent="#1cb0f6" >}}
+
+## Compact layout
+
+Fits a sidebar or a footer:
+
+{{< duolingo layout="compact" lang="pt" >}}
+
+## Picking the stats
+
+{{< duolingo stats="streak,xp" courses="0" avatar="false" >}}
+
+## Another user
+
+Any public profile works:
+
+{{< duolingo user="Luis" lang="en" >}}
