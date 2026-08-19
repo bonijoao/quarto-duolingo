@@ -53,13 +53,13 @@
     "href": "index.html#just-the-main-course-no-bars",
     "title": "quarto-duolingo",
     "section": "Just the main course, no bars",
-    "text": "Just the main course, no bars\nThe bars compare each course against your biggest one, so they earn their keep only when you study several languages. With one course — or with a course that dwarfs the rest — turn them off:\n\nJoão BonifácioSuper@JoohBonny🔥1.213Ofensivadesde mar 2023⚡175.696XP total📅2016Membro desdeAprendendo🇺🇸Inglês175.308 XPAtualizado 2026-08-19"
+    "text": "Just the main course, no bars\nThe bars compare each course against your biggest one, so they earn their keep when you study several languages. With a single course, or with one course that dwarfs the rest, turn them off:\n{{&lt; duolingo courses=\"1\" bars=\"false\" &gt;}}\nJoão BonifácioSuper@JoohBonny🔥1.213Ofensivadesde mar 2023⚡175.696XP total📅2016Membro desdeAprendendo🇺🇸Inglês175.308 XPAtualizado 2026-08-19"
   },
   {
-    "objectID": "index.html#another-user",
-    "href": "index.html#another-user",
+    "objectID": "index.html#overriding-the-username",
+    "href": "index.html#overriding-the-username",
     "title": "quarto-duolingo",
-    "section": "Another user",
-    "text": "Another user\nAny public profile works:\nLuisSuper@Luis🔥3,917Day streaksince Jul 2019⚡148,633Total XP📅2011Member sinceLearning🇫🇷French70,737 XP🇧🇷Portuguese53,997 XP🇪🇸Spanish12,994 XP🇸🇦Arabic5,328 XPUpdated 2026-08-19"
+    "section": "Overriding the username",
+    "text": "Overriding the username\nThe user option works inline too, so a page can point at a different account than the one set in the YAML:\n{{&lt; duolingo user=\"another-username\" &gt;}}\nEvery card on this page reads a single profile: the author’s own. Point the extension at accounts you have reason to publish, since the card reproduces a person’s name, avatar and activity on your site."
   }
 ]
