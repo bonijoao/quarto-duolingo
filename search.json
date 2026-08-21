@@ -4,56 +4,56 @@
     "href": "index.html",
     "title": "quarto-duolingo",
     "section": "",
-    "text": "Set the username once in your YAML and drop the shortcode wherever you want it:\n---\nduolingo:\n  user: joohbonny\n---\n\n{{&lt; duolingo &gt;}}\nJoão BonifácioSuper@JoohBonny🔥1,214Day streaksince Mar 2023⚡175,764Total XP📅2016Member sinceLearningENEnglish175,376 XPESSpanish323 XPFRFrench50 XPDEGerman15 XPUpdated 2026-08-20\nThe data is fetched while the document renders, so the published page is plain HTML — no JavaScript, no API calls from the visitor’s browser."
+    "text": "Set the username once in your YAML and drop the shortcode wherever you want it:\n---\nduolingo:\n  user: joohbonny\n---\n\n{{&lt; duolingo &gt;}}\nJoão BonifácioSuper@JoohBonny🔥1,215Day streaksince Mar 2023⚡175,964Total XP📅2016Member sinceLearningENEnglish175,576 XPESSpanish323 XPFRFrench50 XPDEGerman15 XPUpdated 2026-08-21\nThe data is fetched while the document renders, so the published page is plain HTML — no JavaScript, no API calls from the visitor’s browser."
   },
   {
     "objectID": "index.html#default",
     "href": "index.html#default",
     "title": "quarto-duolingo",
     "section": "",
-    "text": "Set the username once in your YAML and drop the shortcode wherever you want it:\n---\nduolingo:\n  user: joohbonny\n---\n\n{{&lt; duolingo &gt;}}\nJoão BonifácioSuper@JoohBonny🔥1,214Day streaksince Mar 2023⚡175,764Total XP📅2016Member sinceLearningENEnglish175,376 XPESSpanish323 XPFRFrench50 XPDEGerman15 XPUpdated 2026-08-20\nThe data is fetched while the document renders, so the published page is plain HTML — no JavaScript, no API calls from the visitor’s browser."
+    "text": "Set the username once in your YAML and drop the shortcode wherever you want it:\n---\nduolingo:\n  user: joohbonny\n---\n\n{{&lt; duolingo &gt;}}\nJoão BonifácioSuper@JoohBonny🔥1,215Day streaksince Mar 2023⚡175,964Total XP📅2016Member sinceLearningENEnglish175,576 XPESSpanish323 XPFRFrench50 XPDEGerman15 XPUpdated 2026-08-21\nThe data is fetched while the document renders, so the published page is plain HTML — no JavaScript, no API calls from the visitor’s browser."
   },
   {
     "objectID": "index.html#languages",
     "href": "index.html#languages",
     "title": "quarto-duolingo",
     "section": "Languages",
-    "text": "Languages\nlang controls both the labels and the number formatting.\n\n\n\nJoão BonifácioSuper@JoohBonny🔥1.214Ofensivadesde mar 2023⚡175.764XP total📅2016Membro desdeAprendendoENInglês175.376 XPESEspanhol323 XPFRFrancês50 XPDEAlemão15 XPAtualizado 2026-08-20\n\n\nJoão BonifácioSuper@JoohBonny🔥1.214Rachadesde mar 2023⚡175.764XP total📅2016Miembro desdeAprendiendoENInglés175.376 XPESEspañol323 XPFRFrancés50 XPDEAlemán15 XPActualizado 2026-08-20\n\n\n\n\nJoão BonifácioSuper@JoohBonny🔥1 214Sériedepuis mars 2023⚡175 764XP total📅2016Membre depuisApprentissageENAnglais175 376 XPESEspagnol323 XPFRFrançais50 XPDEAllemand15 XPMis à jour 2026-08-20\n\n\nJoão BonifácioSuper@JoohBonny🔥1.214Tage-Serieseit März 2023⚡175.764Gesamt-XP📅2016Mitglied seitLerntENEnglisch175.376 XPESSpanisch323 XPFRFranzösisch50 XPDEDeutsch15 XPAktualisiert 2026-08-20"
+    "text": "Languages\nlang controls both the labels and the number formatting.\n\n\n\nJoão BonifácioSuper@JoohBonny🔥1.215Ofensivadesde mar 2023⚡175.964XP total📅2016Membro desdeAprendendoENInglês175.576 XPESEspanhol323 XPFRFrancês50 XPDEAlemão15 XPAtualizado 2026-08-21\n\n\nJoão BonifácioSuper@JoohBonny🔥1.215Rachadesde mar 2023⚡175.964XP total📅2016Miembro desdeAprendiendoENInglés175.576 XPESEspañol323 XPFRFrancés50 XPDEAlemán15 XPActualizado 2026-08-21\n\n\n\n\nJoão BonifácioSuper@JoohBonny🔥1 215Sériedepuis mars 2023⚡175 964XP total📅2016Membre depuisApprentissageENAnglais175 576 XPESEspagnol323 XPFRFrançais50 XPDEAllemand15 XPMis à jour 2026-08-21\n\n\nJoão BonifácioSuper@JoohBonny🔥1.215Tage-Serieseit März 2023⚡175.964Gesamt-XP📅2016Mitglied seitLerntENEnglisch175.576 XPESSpanisch323 XPFRFranzösisch50 XPDEDeutsch15 XPAktualisiert 2026-08-21"
   },
   {
     "objectID": "index.html#themes",
     "href": "index.html#themes",
     "title": "quarto-duolingo",
     "section": "Themes",
-    "text": "Themes\nauto (the default) follows the reader’s system setting and the Quarto dark toggle. light and dark pin it.\n\n\n\nJoão BonifácioSuper@JoohBonny🔥1,214Day streaksince Mar 2023⚡175,764Total XP📅2016Member sinceLearningENEnglish175,376 XPESSpanish323 XPFRFrench50 XPDEGerman15 XPUpdated 2026-08-20\n\n\nJoão BonifácioSuper@JoohBonny🔥1,214Day streaksince Mar 2023⚡175,764Total XP📅2016Member sinceLearningENEnglish175,376 XPESSpanish323 XPFRFrench50 XPDEGerman15 XPUpdated 2026-08-20"
+    "text": "Themes\nauto (the default) follows the reader’s system setting and the Quarto dark toggle. light and dark pin it.\n\n\n\nJoão BonifácioSuper@JoohBonny🔥1,215Day streaksince Mar 2023⚡175,964Total XP📅2016Member sinceLearningENEnglish175,576 XPESSpanish323 XPFRFrench50 XPDEGerman15 XPUpdated 2026-08-21\n\n\nJoão BonifácioSuper@JoohBonny🔥1,215Day streaksince Mar 2023⚡175,964Total XP📅2016Member sinceLearningENEnglish175,576 XPESSpanish323 XPFRFrench50 XPDEGerman15 XPUpdated 2026-08-21"
   },
   {
     "objectID": "index.html#accent-colour",
     "href": "index.html#accent-colour",
     "title": "quarto-duolingo",
     "section": "Accent colour",
-    "text": "Accent colour\nJoão BonifácioSuper@JoohBonny🔥1,214Day streaksince Mar 2023⚡175,764Total XP📅2016Member sinceLearningENEnglish175,376 XPESSpanish323 XPFRFrench50 XPDEGerman15 XPUpdated 2026-08-20\nJoão BonifácioSuper@JoohBonny🔥1,214Day streaksince Mar 2023⚡175,764Total XP📅2016Member sinceLearningENEnglish175,376 XPESSpanish323 XPFRFrench50 XPDEGerman15 XPUpdated 2026-08-20"
+    "text": "Accent colour\nJoão BonifácioSuper@JoohBonny🔥1,215Day streaksince Mar 2023⚡175,964Total XP📅2016Member sinceLearningENEnglish175,576 XPESSpanish323 XPFRFrench50 XPDEGerman15 XPUpdated 2026-08-21\nJoão BonifácioSuper@JoohBonny🔥1,215Day streaksince Mar 2023⚡175,964Total XP📅2016Member sinceLearningENEnglish175,576 XPESSpanish323 XPFRFrench50 XPDEGerman15 XPUpdated 2026-08-21"
   },
   {
     "objectID": "index.html#compact-layout",
     "href": "index.html#compact-layout",
     "title": "quarto-duolingo",
     "section": "Compact layout",
-    "text": "Compact layout\nFits a sidebar or a footer:\nJoão BonifácioSuper@JoohBonny🔥1.214Ofensivadesde mar 2023⚡175.764XP total📅2016Membro desdeAtualizado 2026-08-20"
+    "text": "Compact layout\nFits a sidebar or a footer:\nJoão BonifácioSuper@JoohBonny🔥1.215Ofensivadesde mar 2023⚡175.964XP total📅2016Membro desdeAtualizado 2026-08-21"
   },
   {
     "objectID": "index.html#picking-the-stats",
     "href": "index.html#picking-the-stats",
     "title": "quarto-duolingo",
     "section": "Picking the stats",
-    "text": "Picking the stats\nJoão BonifácioSuper@JoohBonny🔥1,214Day streaksince Mar 2023⚡175,764Total XPUpdated 2026-08-20"
+    "text": "Picking the stats\nJoão BonifácioSuper@JoohBonny🔥1,215Day streaksince Mar 2023⚡175,964Total XPUpdated 2026-08-21"
   },
   {
     "objectID": "index.html#just-the-main-course-no-bars",
     "href": "index.html#just-the-main-course-no-bars",
     "title": "quarto-duolingo",
     "section": "Just the main course, no bars",
-    "text": "Just the main course, no bars\nThe bars compare each course against your biggest one, so they earn their keep when you study several languages. With a single course, or with one course that dwarfs the rest, turn them off:\n{{&lt; duolingo courses=\"1\" bars=\"false\" &gt;}}\nJoão BonifácioSuper@JoohBonny🔥1.214Ofensivadesde mar 2023⚡175.764XP total📅2016Membro desdeAprendendoENInglês175.376 XPAtualizado 2026-08-20"
+    "text": "Just the main course, no bars\nThe bars compare each course against your biggest one, so they earn their keep when you study several languages. With a single course, or with one course that dwarfs the rest, turn them off:\n{{&lt; duolingo courses=\"1\" bars=\"false\" &gt;}}\nJoão BonifácioSuper@JoohBonny🔥1.215Ofensivadesde mar 2023⚡175.964XP total📅2016Membro desdeAprendendoENInglês175.576 XPAtualizado 2026-08-21"
   },
   {
     "objectID": "index.html#overriding-the-username",
