@@ -197,3 +197,7 @@ activity on your site.
 
 Not affiliated with or endorsed by Duolingo, Inc. The Duolingo name and
 logotype belong to them.
+
+## License
+
+MIT, see [LICENSE](LICENSE).
